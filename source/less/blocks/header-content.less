@@ -1,0 +1,40 @@
+.header-content {
+  position: relative;
+  padding-top: 27px;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-size: 320px 302px;
+  font-family: "Oswald", sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.header-content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 302px;
+  background: url('../../images/background.jpg') no-repeat;
+  z-index: -1;
+}
+
+.header-content__title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.header-content__description {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.header-content__program-button {
+  border: none;
+  background-color: rgb(104, 183, 56);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
