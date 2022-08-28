@@ -1,7 +1,6 @@
 .header-content {
   position: relative;
-  padding-top: 27px;
-  background-color: rgba(104, 183, 56, 0.85);
+  padding-bottom: 20px;
   background-size: 320px 302px;
   font-family: "Oswald", sans-serif;
   color: rgb(255, 255, 255);
@@ -11,30 +10,99 @@
 .header-content::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 320px;
+  top: 167px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 280px;
+  background-image: url('../../images/preview/preview.png');
+  background-repeat: no-repeat;
+}
+
+.header-content__wrapper {
   height: 302px;
-  background: url('../../images/background.jpg') no-repeat;
-  z-index: -1;
+  margin-bottom: 138px;
+  padding-top: 27px;
+  background-image: linear-gradient(rgba(@basic_green, 0.85), rgba(@basic_green, 0.85)),
+    url('../../images/background/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
 }
 
 .header-content__title {
   margin: 0;
+  margin-bottom: 25px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
 }
 
 .header-content__description {
+  display: block;
   font-size: 14px;
   line-height: 14px;
+  text-transform: uppercase;
 }
 
-.header-content__program-button {
-  border: none;
-  background-color: rgb(104, 183, 56);
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
+@media (min-width: @tablet-width) {
+  .header-content {
+    padding-bottom: 526px;
+    padding-left: 117px;
+    text-align: start;
+  }
+
+  .header-content::after {
+    width: 709px;
+    height: 609px;
+    top: 29%;
+    left: 50%;
+    background-image: url('../../images/preview/preview-tablet.png');
+    z-index: -1;
+  }
+
+  .header-content__wrapper {
+    height: 230px;
+    margin-bottom: 47px;
+    padding-top: 38px;
+    text-align: start;
+    background-image: none;
+    color: #000000;
+  }
+
+  .header-content__title {
+    width: 415px;
+    margin-bottom: 41px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .header-content__description {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header-content {
+    padding-bottom: 267px;
+    padding-left: 190px;
+  }
+
+  .header-content::after {
+    width: 550px;
+    height: 500px;
+    top: -22px;
+    left: 832px;
+    background-image: url('../../images/preview/preview-desktop.png');
+    z-index: -1;
+  }
+
+  .header-content__wrapper {
+    height: 230px;
+    margin-bottom: 52px;
+    padding-top: 60px;
+  }
 }

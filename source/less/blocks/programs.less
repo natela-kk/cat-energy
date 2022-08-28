@@ -1,3 +1,43 @@
 .programs {
-  margin: 20px;
+  padding: 0 20px;
+  padding-bottom: 10px;
+}
+
+.programs__list {
+  margin: 0;
+  padding: 0;
+}
+
+.programs__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    padding: 0 30px;
+  }
+
+  .programs__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    padding: 0 110px;
+  }
+
+  .programs__list {
+    display: flex;
+    gap: 80px;
+  }
+
+  .programs__item {
+    min-width: 570px;
+    box-sizing: border-box;
+  }
+
+  .programs__item:not(:last-child) {
+    margin: 0;
+  }
 }

@@ -1,9 +1,15 @@
 .program-info {
-  padding: 20px 0px 20px 50px;
+  padding: 10px 20px 50px;
+}
+
+.program-info__list {
+  margin: 0;
+  padding: 0;
 }
 
 .program-info__title {
   margin: 0;
+  margin-bottom: 40px;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -11,6 +17,109 @@
 }
 
 .program-info__item {
+  position: relative;
+  min-height: 60px;
+  padding-left: 80px;
   list-style-type: none;
-  color: rgb(68, 68, 68);
+  color: @text_grey;
+}
+
+.program-info__item::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: @basic_green;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.program-info__item-benefit::before {
+  background-image: url(../../images/info-benefit.svg);
+}
+
+.program-info__item-powder::before {
+  background-image: url(../../images/info-powder.svg);
+}
+
+.program-info__item-cutlery::before {
+  background-image: url(../../images/info-cutlery.svg);
+}
+
+.program-info__item-watch::before {
+  background-image: url(../../images/info-watch.svg);
+}
+
+.program-info__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-info {
+    padding: 45px 30px 47px;
+    border-bottom: 1px solid @outline_light-grey;
+  }
+
+  .program-info__title {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .program-info__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    counter-reset: list 0;
+  }
+
+  .program-info__item {
+    position: relative;
+    max-width: 245px;
+    padding-left: 0;
+    padding-bottom: 57px;
+    padding-top: 151px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .program-info__item::before {
+    left: 0;
+    top: 40px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .program-info__item::after {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    z-index: -1;
+    counter-increment: list;
+    content: counter(list);
+    width: 110px;
+    height: 230px;
+    color: @basic_grey;
+    font-family: 'Oswald', sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-info {
+    padding: 71px 110px 39px;
+    border-bottom: none;
+  }
+
+  .program-info__list {
+    display: flex;
+    gap: 75px;
+    counter-reset: list 0;
+  }
+
+  .program-info__item {
+    min-width: 250px;
+  }
 }

@@ -2,3 +2,45 @@
   padding: 39px 20px 22px;
   background-color: rgb(242, 242, 242);
 }
+
+.main-footer__logo {
+  display: block;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.main-footer__social-list {
+  border-top: 1px solid @outline_grey;
+  border-bottom: 1px solid @outline_grey;
+}
+
+.main-footer__htmlacademy-logo {
+  margin-top: 22px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 30px 40px;
+  }
+
+  .main-footer__logo {
+    margin: auto 0;
+  }
+
+  .main-footer__social-list {
+    border: none;
+  }
+
+  .main-footer__htmlacademy-logo {
+    gap: 16px;
+    margin: auto 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    padding: 43px 105px 44px 110px;
+  }
+}

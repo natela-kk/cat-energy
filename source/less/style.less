@@ -10,9 +10,31 @@
 @import './blocks/page__body.less';
 @import './blocks/program-info.less';
 @import './blocks/programs.less';
-@import './blocks/range.less';
 @import './blocks/site-list.less';
 @import './blocks/social-list.less';
 @import './blocks/program-block.less';
-@import './fonts.less';
+@import './inclusions/fonts.less';
+@import './blocks/button.less';
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
