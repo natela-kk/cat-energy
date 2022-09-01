@@ -9,8 +9,6 @@
 }
 
 .main-header__logo {
-  background-image: url(../../images/logo.svg);
-  background-repeat: no-repeat;
   width: 191px;
   height: 38px;
 }
@@ -23,8 +21,6 @@
   }
 
   .main-header__logo {
-    background-image: url(../../images/logo-tablet.svg);
-    background-repeat: no-repeat;
     width: 174px;
     height: 52px;
   }
@@ -48,11 +44,16 @@
     background-image: linear-gradient(rgba(@basic_green, 0.85), rgba(@basic_green, 0.85)),
       url('../../images/background/background-desktop.jpg');
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(@basic_green, 0.85), rgba(@basic_green, 0.85)),
+      url('../../images/background/background-desktop@2x.jpg');
+      background-position: 50% 0;
+      background-size: cover;
+    }
   }
 
   .main-header__logo {
-    background-image: url(../../images/logo-desktop.svg);
-    background-repeat: no-repeat;
     width: 202px;
     height: 59px;
   }

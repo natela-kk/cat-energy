@@ -5,13 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat energy</title>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./images/favicon/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo">
-      <span class="visually-hidden">Cat energy логотип</span>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/logo/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg">
+        <img src="images/logo/logo.svg" width="191" height="38" alt="Барбершоп «Бородинский».">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">
@@ -110,8 +116,11 @@
           </div>
         </div>
         <div class="example__before-after">
-          <image class="example__image" src="./images/example-before.png" width="280" height="232"
+          <picture>
+            <source media="(min-width: 768px)" srcset="./images/before-after/before-tablet.png 1x, ./images/before-after/before-tablet@2x.png 2x">
+          <image class="example__image" src="./images/before-after/before.png"  srcset="./images/before-after/before@2x.png 2x" width="280" height="232"
             alt="фото кота - участника программы" />
+          </picture>
           <input class="example__range" type="range">
         </div>
       </div>
